@@ -6,8 +6,8 @@ public class Login extends javax.swing.JFrame {
     
     public Principal v2;
 
-    private final String usuarioCorrecto = " ";
-    private final String contrasenaCorrecta = " ";
+    private final String usuarioCorrecto = "admin";
+    private final String contrasenaCorrecta = "1234";
     
     public Login() {
         initComponents();
@@ -31,7 +31,7 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 204));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -40,8 +40,9 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("Gestion de estudiantes");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btnIngresar.setBackground(new java.awt.Color(0, 51, 255));
+        btnIngresar.setBackground(new java.awt.Color(0, 0, 204));
         btnIngresar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresar.setText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,7 +145,9 @@ public class Login extends javax.swing.JFrame {
             v2.setVisible(true);
             this.dispose();
         } else {
-            error.setVisible(true); // Mostrar mensaje de error
+            error.setVisible(true);
+            inputUser.setText("");
+            passWord.setText("");
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
 
